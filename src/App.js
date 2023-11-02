@@ -19,7 +19,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <canvas width="300" height="300" style={{ border: '1px solid white' }} />
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
