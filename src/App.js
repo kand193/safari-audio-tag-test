@@ -1,7 +1,6 @@
-import logo from './logo.svg';
 import './App.css';
-import React, { useEffect, useState } from 'react';
-import { AudioPlayer } from './components/AudioPlayer';
+import React, { useState } from 'react';
+import { VideosController } from './components/VideosController';
 
 function App() {
   const [players, setPlayers] = useState([]);
@@ -31,16 +30,8 @@ function App() {
         >
           Learn React
         </a>
-        <button onClick={() => handlePlayerAdd(true)}>
-          오디오 태그 생성(즉시 재생)
-        </button>
-        <button onClick={() => handlePlayerAdd(false)}>
-          오디오 태그 생성
-        </button>
         <br />
-        {players.map((player, index) => (
-          <AudioPlayer key={index} {...player} />
-        ))}
+        <VideosController />
       </header>
     </div>
   );
